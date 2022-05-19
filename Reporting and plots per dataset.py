@@ -276,7 +276,13 @@ plt.show()
 
 #%% ROC plot zheng per class
 
-plt.figure(1)
+x = [0, 1, 2, 3, 4]
+y = [xx*xx for xx in x]
+
+fig = plt.figure(figsize=(14,8))
+ax  = fig.add_subplot(111)
+
+ax.set_position([0.1,0.1,0.5,0.8])
 
 colors = cycle(['aqua', 'darkorange', 'cornflowerblue'])
 
@@ -290,7 +296,6 @@ plt.xlim([0.0, 1.0])
 plt.ylim([0.0, 1.05])
 plt.xlabel('False Positive Rate')
 plt.ylabel('True Positive Rate')
-#plt.title('ROC curve of zheng dataset')
 plt.legend(bbox_to_anchor=(1.01,1))
 
 # Save plot
@@ -541,7 +546,13 @@ plt.show()
 
 #%% ROC plot baron_human per class
 
-plt.figure(1)
+x = [0, 1, 2, 3, 4]
+y = [xx*xx for xx in x]
+
+fig = plt.figure(figsize=(14,8))
+ax  = fig.add_subplot(111)
+
+ax.set_position([0.1,0.1,0.5,0.8])
 
 colors = cycle(['aqua', 'darkorange', 'cornflowerblue'])
 
@@ -555,7 +566,6 @@ plt.xlim([0.0, 1.0])
 plt.ylim([0.0, 1.05])
 plt.xlabel('False Positive Rate')
 plt.ylabel('True Positive Rate')
-#plt.title('ROC curve of baron_human dataset')
 plt.legend(bbox_to_anchor=(1.01,1))
 
 # Save plot
@@ -806,7 +816,13 @@ plt.show()
 
 #%% ROC plot inter per class
 
-plt.figure(1)
+x = [0, 1, 2, 3, 4]
+y = [xx*xx for xx in x]
+
+fig = plt.figure(figsize=(14,8))
+ax  = fig.add_subplot(111)
+
+ax.set_position([0.1,0.1,0.5,0.8])
 
 colors = cycle(['aqua', 'darkorange', 'cornflowerblue'])
 
@@ -820,7 +836,6 @@ plt.xlim([0.0, 1.0])
 plt.ylim([0.0, 1.05])
 plt.xlabel('False Positive Rate')
 plt.ylabel('True Positive Rate')
-#plt.title('ROC curve of inter dataset')
 plt.legend(bbox_to_anchor=(1.01,1))
 
 # Save plot
