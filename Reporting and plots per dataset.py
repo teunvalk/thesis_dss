@@ -274,6 +274,29 @@ plt.legend(loc="lower right")
 plt.savefig('Figures/ROC zheng.png', dpi=300)
 plt.show()
 
+#%% ROC plot zheng per class
+
+plt.figure(1)
+
+colors = cycle(['aqua', 'darkorange', 'cornflowerblue'])
+
+for i in range(zheng_labels_onehot.shape[1]):
+    plt.plot(fpr_hybrid[i], tpr_hybrid[i], lw=2,
+             label='C{0} (AUC = {1:0.4f})'
+             ''.format(i, roc_auc_hybrid[i]))
+
+plt.plot([0, 1], [0, 1], 'k--', lw=2)
+plt.xlim([0.0, 1.0])
+plt.ylim([0.0, 1.05])
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+#plt.title('ROC curve of zheng dataset')
+plt.legend(bbox_to_anchor=(1.01,1))
+
+# Save plot
+plt.savefig('Figures/cell level ROC zheng.png', dpi=300)
+plt.show()
+
 #%% Confusion matrix hybrid model zheng
 
 cm = confusion_matrix(y_true_hybrid, y_pred_hybrid)
@@ -516,6 +539,29 @@ plt.legend(loc="lower right")
 plt.savefig('Figures/ROC baron_human.png', dpi=300)
 plt.show()
 
+#%% ROC plot baron_human per class
+
+plt.figure(1)
+
+colors = cycle(['aqua', 'darkorange', 'cornflowerblue'])
+
+for i in range(baron_human_labels_onehot.shape[1]):
+    plt.plot(fpr_hybrid[i], tpr_hybrid[i], lw=2,
+             label='C{0} (AUC = {1:0.4f})'
+             ''.format(i, roc_auc_hybrid[i]))
+
+plt.plot([0, 1], [0, 1], 'k--', lw=2)
+plt.xlim([0.0, 1.0])
+plt.ylim([0.0, 1.05])
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+#plt.title('ROC curve of baron_human dataset')
+plt.legend(bbox_to_anchor=(1.01,1))
+
+# Save plot
+plt.savefig('Figures/cell level ROC baron_human.png', dpi=300)
+plt.show()
+
 #%% Confusion matrix hybrid model baron_human
 
 cm = confusion_matrix(y_true_hybrid, y_pred_hybrid)
@@ -756,6 +802,29 @@ plt.legend(loc="lower right")
 
 # Save plot
 plt.savefig('Figures/ROC inter.png', dpi=300)
+plt.show()
+
+#%% ROC plot inter per class
+
+plt.figure(1)
+
+colors = cycle(['aqua', 'darkorange', 'cornflowerblue'])
+
+for i in range(inter_labels_onehot.shape[1]):
+    plt.plot(fpr_hybrid[i], tpr_hybrid[i], lw=2,
+             label='C{0} (AUC = {1:0.4f})'
+             ''.format(i, roc_auc_hybrid[i]))
+
+plt.plot([0, 1], [0, 1], 'k--', lw=2)
+plt.xlim([0.0, 1.0])
+plt.ylim([0.0, 1.05])
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+#plt.title('ROC curve of inter dataset')
+plt.legend(bbox_to_anchor=(1.01,1))
+
+# Save plot
+plt.savefig('Figures/cell level ROC inter.png', dpi=300)
 plt.show()
 
 #%% Confusion matrix hybrid model inter
