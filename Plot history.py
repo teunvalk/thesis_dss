@@ -19,7 +19,7 @@ modelDIR = "C:/Users/teun_/OneDrive/Documenten/Master Data Science and Society/T
 
 #%% Load train and validation performance of CNN
 
-datasets = ['zheng', 'baron_human', 'amb']
+datasets = ['zheng', 'baron_human']
 
 cnn_performance = {}
 
@@ -35,7 +35,7 @@ for dataset in datasets:
 
 #%% Plot train and validation performance CNN
 
-datasets = ['zheng', 'baron_human', 'amb', 'inter_pbmc']
+datasets = ['zheng', 'baron_human', 'inter_pbmc']
 
 for dataset in datasets:
     plt.plot(cnn_performance[dataset]["val_accuracy"])
@@ -59,7 +59,7 @@ plt.show()
 
 # Load train and validation performance of LSTM
 
-datasets = ['zheng', 'baron_human', 'amb']
+datasets = ['zheng', 'baron_human']
 
 LSTM_performance = {}
 
@@ -75,7 +75,7 @@ for dataset in datasets:
 
 #%% Plot train and validation performance LSTM
 
-datasets = ['zheng', 'baron_human', 'amb', 'inter_pbmc']
+datasets = ['zheng', 'baron_human', 'inter_pbmc']
 
 for dataset in datasets:
     plt.plot(LSTM_performance[dataset]["val_accuracy"])
@@ -99,7 +99,7 @@ plt.show()
 
 # Load train and validation performance of hybrid
 
-datasets = ['zheng', 'baron_human', 'amb']
+datasets = ['zheng', 'baron_human']
 
 hybrid_performance = {}
 
@@ -115,7 +115,7 @@ for dataset in datasets:
 
 #%% Plot train and validation performance hybrid
 
-datasets = ['zheng', 'baron_human', 'amb', 'inter_pbmc']
+datasets = ['zheng', 'baron_human', 'inter_pbmc']
 
 for dataset in datasets:
     plt.plot(hybrid_performance[dataset]["val_accuracy"])
