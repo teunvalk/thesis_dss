@@ -289,7 +289,7 @@ colors = cycle(['aqua', 'darkorange', 'cornflowerblue'])
 for i in range(zheng_labels_onehot.shape[1]):
     plt.plot(fpr_hybrid[i], tpr_hybrid[i], lw=2,
              label='C{0} (AUC = {1:0.4f})'
-             ''.format(i, roc_auc_hybrid[i]))
+             ''.format(i+1, roc_auc_hybrid[i]))
 
 plt.plot([0, 1], [0, 1], 'k--', lw=2)
 plt.xlim([0.0, 1.0])
@@ -559,7 +559,7 @@ colors = cycle(['aqua', 'darkorange', 'cornflowerblue'])
 for i in range(baron_human_labels_onehot.shape[1]):
     plt.plot(fpr_hybrid[i], tpr_hybrid[i], lw=2,
              label='C{0} (AUC = {1:0.4f})'
-             ''.format(i, roc_auc_hybrid[i]))
+             ''.format(i+1, roc_auc_hybrid[i]))
 
 plt.plot([0, 1], [0, 1], 'k--', lw=2)
 plt.xlim([0.0, 1.0])
@@ -829,7 +829,7 @@ colors = cycle(['aqua', 'darkorange', 'cornflowerblue'])
 for i in range(inter_labels_onehot.shape[1]):
     plt.plot(fpr_hybrid[i], tpr_hybrid[i], lw=2,
              label='C{0} (AUC = {1:0.4f})'
-             ''.format(i, roc_auc_hybrid[i]))
+             ''.format(i+1, roc_auc_hybrid[i]))
 
 plt.plot([0, 1], [0, 1], 'k--', lw=2)
 plt.xlim([0.0, 1.0])
