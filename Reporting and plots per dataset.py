@@ -306,9 +306,9 @@ plt.show()
 
 cm = confusion_matrix(y_true_hybrid, y_pred_hybrid)
 
-fig = plt.figure(figsize=(28, 26))
+fig = plt.figure(figsize=(16, 10))
 ax = plt.subplot()
-sns.set(font_scale=3.0)
+sns.set(font_scale=1.7)
 sns.heatmap(cm, annot=True, ax = ax, fmt = 'g', cmap='Blues')
 
 class_names = np.sort(np.unique(zheng_labels))
@@ -321,11 +321,11 @@ for i in range(zheng_labels_onehot.shape[1]):
 ax.xaxis.set_label_position('bottom')
 #plt.xticks(rotation=90)
 ax.xaxis.set_ticklabels(class_names, fontsize = 20)
-ax.set_xlabel('Predicted', fontsize=36)
+ax.set_xlabel('Predicted', fontsize=20)
 ax.xaxis.tick_bottom()
 
 ax.yaxis.set_ticklabels(class_names, fontsize = 20)
-ax.set_ylabel('True', fontsize=36)
+ax.set_ylabel('True', fontsize=20)
 plt.yticks(rotation=0)
 
 plt.savefig('Figures/CM zheng.png', dpi=300)
@@ -576,12 +576,12 @@ plt.show()
 
 cm = confusion_matrix(y_true_hybrid, y_pred_hybrid)
 
-fig = plt.figure(figsize=(28, 26))
+fig = plt.figure(figsize=(16, 10))
 ax = plt.subplot()
-sns.set(font_scale=3.0)
+sns.set(font_scale=1.7)
 sns.heatmap(cm, annot=True, ax = ax, fmt = 'g', cmap='Blues')
 
-#class_names = np.sort(np.unique(baron_human_labels))
+class_names = np.sort(np.unique(baron_human_labels))
 
 class_names = []
 
@@ -591,11 +591,11 @@ for i in range(baron_human_labels_onehot.shape[1]):
 ax.xaxis.set_label_position('bottom')
 #plt.xticks(rotation=90)
 ax.xaxis.set_ticklabels(class_names, fontsize = 20)
-ax.set_xlabel('Predicted', fontsize=36)
+ax.set_xlabel('Predicted', fontsize=20)
 ax.xaxis.tick_bottom()
 
 ax.yaxis.set_ticklabels(class_names, fontsize = 20)
-ax.set_ylabel('True', fontsize=36)
+ax.set_ylabel('True', fontsize=20)
 plt.yticks(rotation=0)
 
 plt.savefig('Figures/CM baron_human.png', dpi=300)
@@ -846,12 +846,12 @@ plt.show()
 
 cm = confusion_matrix(y_true_hybrid, y_pred_hybrid)
 
-fig = plt.figure(figsize=(28, 26))
+fig = plt.figure(figsize=(16, 10))
 ax = plt.subplot()
-sns.set(font_scale=3.0)
+sns.set(font_scale=1.7)
 sns.heatmap(cm, annot=True, ax = ax, fmt = 'g', cmap='Blues')
 
-#class_names = np.sort(np.unique(inter_labels))
+class_names = np.sort(np.unique(inter_labels))
 
 class_names = []
 
@@ -861,11 +861,11 @@ for i in range(inter_labels_onehot.shape[1]):
 ax.xaxis.set_label_position('bottom')
 #plt.xticks(rotation=90)
 ax.xaxis.set_ticklabels(class_names, fontsize = 20)
-ax.set_xlabel('Predicted', fontsize=36)
+ax.set_xlabel('Predicted', fontsize=20)
 ax.xaxis.tick_bottom()
 
 ax.yaxis.set_ticklabels(class_names, fontsize = 20)
-ax.set_ylabel('True', fontsize=36)
+ax.set_ylabel('True', fontsize=20)
 plt.yticks(rotation=0)
 
 plt.savefig('Figures/CM inter.png', dpi=300)
